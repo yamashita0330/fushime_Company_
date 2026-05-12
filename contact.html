@@ -532,6 +532,30 @@ strong, b{font-weight:700}
   .footer a { font-size: 12px !important; }
   .footer-bottom { margin-top: 24px !important; padding-top: 16px !important; flex-direction: column; align-items: flex-start; }
 }
+
+/* ===== TEXT WRAPPING (日本語の孤立文字防止) ===== */
+h1, h2, h3, h4, .h-display, .h-1, .h-2, .lede, .article-lede, .ceo blockquote {
+  text-wrap: balance;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+p, .body, .article-body p {
+  text-wrap: pretty;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+/* モバイルではHTML中の<br>を無視してCSSに任せる */
+@media (max-width: 640px) {
+  h1 br, h2 br, h3 br, .h-display br, .h-1 br, .h-2 br, .lede br, .article-lede br,
+  .ceo blockquote br, .message p.lead br, .stage h2 br, .product h2 br,
+  .cta h2 br, .cta .lede br, .hero h1 br, .hero .lede br, .ceo-hero h1 br {
+    display: none;
+  }
+  /* h3 のカード見出し(.biz-card h3 等)は残したい場合があるので別途維持 */
+  .biz-card h3 br { display: initial !important; }
+}
 </style>
 </head>
 <body>
