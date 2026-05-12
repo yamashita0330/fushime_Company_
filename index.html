@@ -1062,6 +1062,19 @@ p, .body, .article-body p {
   .num-item .big { font-size: 30px !important; }
   .num-item .lbl { font-size: 11px !important; }
 }
+
+.nr-row:hover { background: rgba(0,0,0,.02) }
+.nr-row:hover h4 { color: #ff4d00 !important }
+@media (max-width: 640px) {
+  .nr-row {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+    padding: 16px 4px !important;
+  }
+  .nr-row time { font-size: 11px !important }
+  .nr-row span { font-size: 10px !important; justify-self: start; padding: 3px 8px !important }
+  .nr-row h4 { font-size: 14px !important }
+}
 </style>
 </head>
 <body>
@@ -1536,30 +1549,45 @@ p, .body, .article-body p {
   </div>
 </section>
 
-<!-- ============================== TIMELINE ============================== -->
-<section class="timeline">
-  <div class="timeline-inner">
-    <p class="eyebrow center reveal">Milestones</p>
-    <h2 class="h-2 reveal reveal-d1">徳島で完璧を作り、全国へ。</h2>
-    <div class="tl-row reveal">
-      <div class="tl-year">2020</div>
-      <div class="tl-body"><h4>株式会社FUSHIME 設立</h4><p>徳島市にて創業。「人生の節目をつくる」を起点に活動開始。</p></div>
+<!-- ============================== NEWS RELEASE ============================== -->
+<section class="timeline" id="newsrelease">
+  <div class="timeline-inner" style="max-width:980px">
+    <p class="eyebrow center reveal">News Release</p>
+    <h2 class="h-2 reveal reveal-d1" style="text-align:center">活動レポート</h2>
+    <div class="news-release-list" style="display:grid;gap:0;margin-top:48px">
+      <a href="https://www.fushime.site/" class="nr-row reveal" style="display:grid;grid-template-columns:120px 110px 1fr;gap:24px;padding:24px 4px;border-bottom:1px solid rgba(0,0,0,.08);color:inherit;text-decoration:none;align-items:center;transition:background .2s">
+        <time style="font-size:13px;color:#86868b;font-feature-settings:&quot;tnum&quot; 1">2026.05.06</time>
+        <span style="font-size:11px;font-weight:700;color:#ff4d00;padding:4px 10px;border-radius:980px;background:rgba(255,77,0,.08);text-align:center;letter-spacing:-.005em">イベント</span>
+        <h4 style="font-size:16px;font-weight:700;color:#1d1d1f;line-height:1.4;letter-spacing:-.02em;margin:0">恋フェスJAPAN Vol.5 開催決定（ゆめタウン徳島・300名規模）</h4>
+      </a>
+      <a href="https://www.fushime.site/" class="nr-row reveal" style="display:grid;grid-template-columns:120px 110px 1fr;gap:24px;padding:24px 4px;border-bottom:1px solid rgba(0,0,0,.08);color:inherit;text-decoration:none;align-items:center;transition:background .2s">
+        <time style="font-size:13px;color:#86868b;font-feature-settings:&quot;tnum&quot; 1">2026.05.04</time>
+        <span style="font-size:11px;font-weight:700;color:#ff4d00;padding:4px 10px;border-radius:980px;background:rgba(255,77,0,.08);text-align:center;letter-spacing:-.005em">恋フェス</span>
+        <h4 style="font-size:16px;font-weight:700;color:#1d1d1f;line-height:1.4;letter-spacing:-.02em;margin:0">12タイプ恋愛診断「12恋神」リリース予定</h4>
+      </a>
+      <a href="https://www.fushime.site/" class="nr-row reveal" style="display:grid;grid-template-columns:120px 110px 1fr;gap:24px;padding:24px 4px;border-bottom:1px solid rgba(0,0,0,.08);color:inherit;text-decoration:none;align-items:center;transition:background .2s">
+        <time style="font-size:13px;color:#86868b;font-feature-settings:&quot;tnum&quot; 1">2026.05.02</time>
+        <span style="font-size:11px;font-weight:700;color:#ff4d00;padding:4px 10px;border-radius:980px;background:rgba(255,77,0,.08);text-align:center;letter-spacing:-.005em">プロダクト</span>
+        <h4 style="font-size:16px;font-weight:700;color:#1d1d1f;line-height:1.4;letter-spacing:-.02em;margin:0">サロンカルテ管理システム公開</h4>
+      </a>
+      <a href="https://www.fushime.site/" class="nr-row reveal" style="display:grid;grid-template-columns:120px 110px 1fr;gap:24px;padding:24px 4px;border-bottom:1px solid rgba(0,0,0,.08);color:inherit;text-decoration:none;align-items:center;transition:background .2s">
+        <time style="font-size:13px;color:#86868b;font-feature-settings:&quot;tnum&quot; 1">2026.04.29</time>
+        <span style="font-size:11px;font-weight:700;color:#ff4d00;padding:4px 10px;border-radius:980px;background:rgba(255,77,0,.08);text-align:center;letter-spacing:-.005em">恋フェス</span>
+        <h4 style="font-size:16px;font-weight:700;color:#1d1d1f;line-height:1.4;letter-spacing:-.02em;margin:0">創業応援加盟店プログラム 8枠で募集開始</h4>
+      </a>
+      <a href="https://www.fushime.site/" class="nr-row reveal" style="display:grid;grid-template-columns:120px 110px 1fr;gap:24px;padding:24px 4px;border-bottom:1px solid rgba(0,0,0,.08);color:inherit;text-decoration:none;align-items:center;transition:background .2s">
+        <time style="font-size:13px;color:#86868b;font-feature-settings:&quot;tnum&quot; 1">2026.04.27</time>
+        <span style="font-size:11px;font-weight:700;color:#ff4d00;padding:4px 10px;border-radius:980px;background:rgba(255,77,0,.08);text-align:center;letter-spacing:-.005em">プロダクト</span>
+        <h4 style="font-size:16px;font-weight:700;color:#1d1d1f;line-height:1.4;letter-spacing:-.02em;margin:0">マッチングアプリ「MIRAIZ」開発を本格始動</h4>
+      </a>
+      <a href="https://www.fushime.site/" class="nr-row reveal" style="display:grid;grid-template-columns:120px 110px 1fr;gap:24px;padding:24px 4px;border-bottom:1px solid rgba(0,0,0,.08);color:inherit;text-decoration:none;align-items:center;transition:background .2s">
+        <time style="font-size:13px;color:#86868b;font-feature-settings:&quot;tnum&quot; 1">2026.04.27</time>
+        <span style="font-size:11px;font-weight:700;color:#ff4d00;padding:4px 10px;border-radius:980px;background:rgba(255,77,0,.08);text-align:center;letter-spacing:-.005em">会社情報</span>
+        <h4 style="font-size:16px;font-weight:700;color:#1d1d1f;line-height:1.4;letter-spacing:-.02em;margin:0">「恋フェスエコシステム」戦略を確定</h4>
+      </a>
     </div>
-    <div class="tl-row reveal">
-      <div class="tl-year">2023</div>
-      <div class="tl-body"><h4>美容領域へ参入</h4><p>美意識（脱毛・フェイシャル）、challengym を立ち上げ、自信づくりの基盤を内製化。</p></div>
-    </div>
-    <div class="tl-row reveal">
-      <div class="tl-year">2024</div>
-      <div class="tl-body"><h4>恋フェスJAPAN 始動</h4><p>体験型婚活イベントを徳島で開催。「恋の通知表」コンセプトを定式化。</p></div>
-    </div>
-    <div class="tl-row reveal">
-      <div class="tl-year">2026</div>
-      <div class="tl-body"><h4>カルテシステム本格稼働 ／ Vol.5 開催</h4><p>サロンカルテ・FUSHIME Beauty・MIRAIZ を統合運用。恋フェスVol.5（ゆめタウン徳島・300名規模）。</p></div>
-    </div>
-    <div class="tl-row reveal">
-      <div class="tl-year">2027</div>
-      <div class="tl-body"><h4>全国展開フェーズへ</h4><p>徳島で完成したエコシステムをパッケージ化し、全国の地方都市へ。</p></div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="news.html" class="btn btn-ghost">すべてのお知らせを見る</a>
     </div>
   </div>
 </section>
@@ -1573,7 +1601,7 @@ p, .body, .article-body p {
       <div class="info-row"><dt>会社名</dt><dd>株式会社FUSHIME（FUSHIME, Inc.）</dd></div>
       <div class="info-row"><dt>設立</dt><dd>2020年4月</dd></div>
       <div class="info-row"><dt>代表取締役</dt><dd>山下 克斗</dd></div>
-      <div class="info-row"><dt>本社所在地</dt><dd>徳島県徳島市</dd></div>
+      <div class="info-row"><dt>本社所在地</dt><dd>徳島県徳島市佐古8番町3-20 野村ビル1F</dd></div>
       <div class="info-row"><dt>事業内容</dt><dd>恋フェスJAPAN ／ 美意識・challengym ／ サロンカルテ・FUSHIME Beauty ／ MIRAIZ アプリ開発・運営</dd></div>
       <div class="info-row"><dt>ミッション</dt><dd>出会いで、人生の節目を創る。</dd></div>
     </dl>
@@ -1599,7 +1627,7 @@ p, .body, .article-body p {
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="index.html" class="brand">FUSHI<b>ME</b></a>
-      <p>株式会社FUSHIME<br>徳島県徳島市<br>© 2026 FUSHIME, Inc.</p>
+      <p>株式会社FUSHIME<br>徳島県徳島市佐古8番町3-20<br>野村ビル1F<br>© 2026 FUSHIME, Inc.</p>
     </div>
     <div>
       <h5>事業</h5>
@@ -1623,7 +1651,7 @@ p, .body, .article-body p {
       <h5>Contact</h5>
       <ul>
         <li><a href="contact.html">お問い合わせフォーム</a></li>
-        <li><a href="mailto:contact@fushime.co.jp">contact@fushime.co.jp</a></li>
+        <li><a href="mailto:odorokiwo@gmail.com">odorokiwo@gmail.com</a></li>
       </ul>
       <h5 style="margin-top:28px">Follow</h5>
       <div class="footer-sns">
