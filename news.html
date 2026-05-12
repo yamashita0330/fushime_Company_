@@ -531,6 +531,74 @@ p, .body, .article-body p {
   /* h3 のカード見出し(.biz-card h3 等)は残したい場合があるので別途維持 */
   .biz-card h3 br { display: initial !important; }
 }
+
+/* ===== MOBILE TYPOGRAPHY SHRINK ===== */
+@media (max-width: 640px) {
+  body { font-size: 14px !important; }
+  .h-display { font-size: 30px !important; line-height: 1.15 !important; }
+  .h-1 { font-size: 24px !important; line-height: 1.25 !important; }
+  .h-2 { font-size: 20px !important; line-height: 1.3 !important; }
+  .lede {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    color: #86868b !important;
+  }
+  .article-lede { font-size: 14px !important; line-height: 1.6 !important; }
+  p, .body, .article-body p, .message p { font-size: 14px !important; line-height: 1.65 !important; }
+  .message p.lead { font-size: 15px !important; }
+  .eyebrow { font-size: 10px !important; margin-bottom: 8px !important; letter-spacing: 0.06em !important; }
+
+  /* CEOブロッククォート */
+  .ceo blockquote { font-size: 18px !important; }
+
+  /* ボタン */
+  .btn { font-size: 13px !important; padding: 11px 20px !important; }
+  .hero-cta .btn { padding: 10px 18px !important; }
+  .nav-cta { font-size: 11px !important; padding: 6px 12px !important; }
+
+  /* Layer 02 / 03 のカード内テキスト */
+  .biz-card h3 { font-size: 22px !important; }
+  .biz-card p { font-size: 12px !important; line-height: 1.5 !important; }
+  .biz-card .badge { font-size: 9px !important; padding: 4px 9px !important; }
+  .biz-card .num { font-size: 11px !important; }
+
+  /* グロウススコア */
+  .growth-overlay .score { font-size: 36px !important; }
+  .growth-overlay .trend { font-size: 10px !important; }
+  .growth-overlay .label { font-size: 9px !important; }
+  .growth-stat .val { font-size: 13px !important; }
+  .growth-stat .lbl { font-size: 8px !important; }
+
+  /* タイムライン */
+  .tl-year { font-size: 14px !important; }
+  .tl-body h4 { font-size: 15px !important; }
+  .tl-body p { font-size: 12px !important; }
+
+  /* infoテーブル */
+  .info-row { font-size: 13px !important; padding: 12px 4px !important; }
+  .info-row dt { font-size: 11px !important; }
+
+  /* お知らせ・ニュース */
+  .news-card h3 { font-size: 16px !important; }
+  .news-card p { font-size: 12px !important; }
+  .news-meta { font-size: 11px !important; }
+
+  /* フッター */
+  .footer { font-size: 11px !important; }
+  .footer h5 { font-size: 11px !important; }
+  .footer a, .footer li { font-size: 11px !important; }
+  .footer-bottom { font-size: 10px !important; }
+
+  /* お問い合わせ */
+  .kind-card h3 { font-size: 14px !important; }
+  .kind-card p { font-size: 12px !important; }
+  .form-inner h2 { font-size: 20px !important; }
+  .field label { font-size: 11px !important; }
+
+  /* 数字グリッド */
+  .num-item .big { font-size: 30px !important; }
+  .num-item .lbl { font-size: 11px !important; }
+}
 </style>
 </head>
 <body>
