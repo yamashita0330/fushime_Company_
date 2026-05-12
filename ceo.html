@@ -667,6 +667,38 @@ p, .body, .article-body p {
   .num-item .big { font-size: 30px !important; }
   .num-item .lbl { font-size: 11px !important; }
 }
+
+/* ===== CEO PORTRAIT MOBILE — 強制表示 ===== */
+@media (max-width: 640px) {
+  .ceo-hero-inner { display: flex !important; flex-direction: column !important; gap: 28px !important; }
+  .ceo-hero-text { order: 2; }
+  .ceo-portrait { 
+    order: 1;
+    height: 360px !important;
+    aspect-ratio: unset !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    transform: none !important;
+    border-radius: 16px !important;
+    background: #000 !important;
+    position: relative !important;
+  }
+  .ceo-portrait img {
+    z-index: 5 !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 25% !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+  .ceo-portrait-fallback { display: none !important; }
+}
 </style>
 </head>
 <body>
