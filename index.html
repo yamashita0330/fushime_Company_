@@ -1075,6 +1075,41 @@ p, .body, .article-body p {
   .nr-row span { font-size: 10px !important; justify-self: start; padding: 3px 8px !important }
   .nr-row h4 { font-size: 14px !important }
 }
+
+/* ===== Stage Japan Background ===== */
+.stage-japan {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.stage-japan::before {
+  content: '';
+  position: absolute; inset: 0; z-index: -2;
+  background:
+    url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat;
+  animation: japanZoom 16s ease-in-out infinite alternate;
+}
+.stage-japan::after {
+  content: '';
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(60% 80% at 50% 50%, rgba(0,0,0,.55), rgba(0,0,0,.85)),
+    linear-gradient(180deg, rgba(22,22,23,.4) 0%, rgba(22,22,23,.85) 100%);
+}
+@keyframes japanZoom {
+  0% { transform: scale(1) translateY(0); }
+  100% { transform: scale(1.1) translateY(-2%); }
+}
+.stage-japan h2, .stage-japan .lede, .stage-japan .eyebrow {
+  text-shadow: 0 2px 30px rgba(0,0,0,.5);
+}
+/* 強いフェードイン演出 */
+.stage-japan .reveal {
+  transition: opacity 1.4s var(--ease), transform 1.4s var(--ease);
+}
+.stage-japan h2.reveal {
+  transition: opacity 1.8s var(--ease), transform 1.8s var(--ease);
+}
 </style>
 </head>
 <body>
@@ -1124,7 +1159,7 @@ p, .body, .article-body p {
 </section>
 
 <!-- ============================== STAGE: 課題 ============================== -->
-<section class="stage dark" id="vision">
+<section class="stage dark stage-japan" id="vision">
   <p class="eyebrow reveal">The Question</p>
   <h2 class="h-1 reveal reveal-d1">
     日本は、<br>恋愛ができない国になった。
@@ -1507,31 +1542,7 @@ p, .body, .article-body p {
   </div>
 </section>
 
-<!-- ============================== NUMBERS ============================== -->
-<section class="numbers">
-  <div class="numbers-inner">
-    <p class="eyebrow reveal">By the Numbers</p>
-    <h2 class="h-2 reveal reveal-d1">熱量は、数字で証明する。</h2>
-    <div class="num-grid">
-      <div class="num-item reveal reveal-d1">
-        <span class="big">2020</span>
-        <span class="lbl">設立</span>
-      </div>
-      <div class="num-item reveal reveal-d2">
-        <span class="big">3<sup>層</sup></span>
-        <span class="lbl">エコシステム</span>
-      </div>
-      <div class="num-item reveal reveal-d3">
-        <span class="big">5<sup>+</sup></span>
-        <span class="lbl">運営／開発中事業</span>
-      </div>
-      <div class="num-item reveal reveal-d4">
-        <span class="big">徳島</span>
-        <span class="lbl">本社所在地</span>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ============================== CEO QUOTE ============================== -->
 <section class="ceo">
