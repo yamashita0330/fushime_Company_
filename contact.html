@@ -485,6 +485,53 @@ strong, b{font-weight:700}
 .thanks-banner.show{display:block}
 .thanks-banner h3{font-size:24px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px}
 .thanks-banner p{font-size:15px;color:var(--ink-mute);font-weight:400}
+
+/* ===== MOBILE EXTRA TIGHTENING ===== */
+@media (max-width: 640px) {
+  /* マーキー類の余白カット */
+  .yt-marquee { padding: 16px 0 24px !important; }
+  .biz-marquee { padding: 16px 0 24px !important; }
+  .yt-cta { margin-top: 0 !important; padding-bottom: 20px; }
+
+  /* セクション内部の余白カット */
+  .product { padding: 40px 20px !important; }
+  .product .lede { margin-bottom: 24px !important; }
+  .stage { padding: 50px 20px !important; }
+  .stage h2 { margin-bottom: 16px !important; }
+  .ceo { padding: 50px 20px !important; }
+  .ceo blockquote { margin-bottom: 18px !important; }
+  .timeline { padding: 50px 20px !important; }
+  .info { padding: 50px 20px !important; }
+  .cta { padding: 50px 20px !important; }
+  .numbers { padding: 50px 20px !important; }
+  .numbers h2 { margin-bottom: 32px !important; }
+  .growth-panel { margin-bottom: 24px !important; }
+
+  /* CEO ページの余白も */
+  .ceo-hero { padding: 50px 20px 30px !important; }
+  .ceo-hero-inner { gap: 24px !important; }
+  .ceo-portrait { max-width: 320px !important; margin: 0 auto !important; }
+  .message { padding: 50px 20px !important; }
+  .message p { font-size: 15px !important; line-height: 1.7 !important; margin-bottom: 16px !important; }
+  .message p.lead { font-size: 17px !important; margin-bottom: 24px !important; }
+  .message h2 { font-size: 22px !important; margin-bottom: 24px !important; }
+  .values { padding: 50px 20px !important; }
+  .values h2 { margin-bottom: 32px !important; }
+  .values-grid { gap: 28px !important; }
+
+  /* フッターを2列+大幅圧縮 */
+  .footer { padding: 32px 20px 20px !important; font-size: 12px !important; }
+  .footer-inner {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px 18px !important;
+  }
+  .footer-brand { grid-column: 1 / -1; margin-bottom: 8px; }
+  .footer-brand p { font-size: 11px !important; line-height: 1.5 !important; }
+  .footer h5 { margin-bottom: 10px !important; font-size: 12px !important; }
+  .footer li { margin-bottom: 6px !important; }
+  .footer a { font-size: 12px !important; }
+  .footer-bottom { margin-top: 24px !important; padding-top: 16px !important; flex-direction: column; align-items: flex-start; }
+}
 </style>
 </head>
 <body>

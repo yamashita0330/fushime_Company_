@@ -349,6 +349,56 @@ strong, b{font-weight:700}
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* ===== MOBILE FURTHER TIGHTENING ===== */
+@media (max-width: 640px) {
+  .hero { padding: 70px 20px 40px !important; min-height: 70vh !important; }
+  .stage { padding: 50px 20px !important; min-height: auto !important; }
+  .product { padding: 50px 20px 60px !important; }
+  .numbers { padding: 50px 20px !important; }
+  .ceo { padding: 60px 20px !important; }
+  .timeline { padding: 50px 20px !important; }
+  .info { padding: 50px 20px !important; }
+  .cta { padding: 60px 20px !important; }
+  .growth-panel { margin-bottom: 40px !important; height: 240px !important; }
+  .ceo-hero { padding: 70px 20px 40px !important; }
+  .message { padding: 50px 20px !important; }
+  .values { padding: 60px 20px !important; }
+  .menu-toggle { display: inline-flex !important; }
+  .nav-links { display: none !important; }
+  .nav-links.open {
+    display: flex !important;
+    position: fixed !important;
+    top: 48px !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+    background: rgba(255,255,255,.98) !important;
+    backdrop-filter: blur(30px) !important;
+    flex-direction: column !important;
+    padding: 32px 24px !important;
+    gap: 0 !important;
+    z-index: 99;
+    overflow-y: auto;
+  }
+  .nav-links.open a {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    padding: 18px 8px !important;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    width: 100%;
+    color: var(--ink) !important;
+    opacity: 1 !important;
+  }
+  .nav-links.open a:last-child {
+    margin-top: 16px;
+    border-bottom: none !important;
+    background: var(--ink) !important;
+    color: #fff !important;
+    border-radius: 980px !important;
+    text-align: center !important;
+    font-size: 16px !important;
+    padding: 16px !important;
+  }
+}
+
 </style>
 <style>
 /* ===== CEO HERO (大きな写真) ===== */
@@ -424,6 +474,18 @@ strong, b{font-weight:700}
 .profile-row dd{color:var(--ink);font-weight:400;line-height:1.5}
 @media(max-width:560px){.profile-row{grid-template-columns:1fr;gap:6px;padding:20px 4px}}
 
+
+.sns-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:980px;
+  background:var(--bg-soft);color:var(--ink);
+  font-size:14px;font-weight:400;letter-spacing:-0.01em;
+  transition:background .2s var(--ease), transform .2s var(--ease);
+  text-decoration:none;
+}
+.sns-btn:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+.sns-btn svg{width:18px;height:18px}
+
 /* ===== VALUES ===== */
 .values{padding:200px 22px;background:var(--bg-dark);color:#fff;text-align:center}
 .values-inner{max-width:var(--max);margin:0 auto}
@@ -447,6 +509,53 @@ strong, b{font-weight:700}
 .cta h2{max-width:18em;margin:0 auto 24px}
 .cta .lede{max-width:30em;margin:0 auto 40px}
 .cta-actions{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+
+/* ===== MOBILE EXTRA TIGHTENING ===== */
+@media (max-width: 640px) {
+  /* マーキー類の余白カット */
+  .yt-marquee { padding: 16px 0 24px !important; }
+  .biz-marquee { padding: 16px 0 24px !important; }
+  .yt-cta { margin-top: 0 !important; padding-bottom: 20px; }
+
+  /* セクション内部の余白カット */
+  .product { padding: 40px 20px !important; }
+  .product .lede { margin-bottom: 24px !important; }
+  .stage { padding: 50px 20px !important; }
+  .stage h2 { margin-bottom: 16px !important; }
+  .ceo { padding: 50px 20px !important; }
+  .ceo blockquote { margin-bottom: 18px !important; }
+  .timeline { padding: 50px 20px !important; }
+  .info { padding: 50px 20px !important; }
+  .cta { padding: 50px 20px !important; }
+  .numbers { padding: 50px 20px !important; }
+  .numbers h2 { margin-bottom: 32px !important; }
+  .growth-panel { margin-bottom: 24px !important; }
+
+  /* CEO ページの余白も */
+  .ceo-hero { padding: 50px 20px 30px !important; }
+  .ceo-hero-inner { gap: 24px !important; }
+  .ceo-portrait { max-width: 320px !important; margin: 0 auto !important; }
+  .message { padding: 50px 20px !important; }
+  .message p { font-size: 15px !important; line-height: 1.7 !important; margin-bottom: 16px !important; }
+  .message p.lead { font-size: 17px !important; margin-bottom: 24px !important; }
+  .message h2 { font-size: 22px !important; margin-bottom: 24px !important; }
+  .values { padding: 50px 20px !important; }
+  .values h2 { margin-bottom: 32px !important; }
+  .values-grid { gap: 28px !important; }
+
+  /* フッターを2列+大幅圧縮 */
+  .footer { padding: 32px 20px 20px !important; font-size: 12px !important; }
+  .footer-inner {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px 18px !important;
+  }
+  .footer-brand { grid-column: 1 / -1; margin-bottom: 8px; }
+  .footer-brand p { font-size: 11px !important; line-height: 1.5 !important; }
+  .footer h5 { margin-bottom: 10px !important; font-size: 12px !important; }
+  .footer li { margin-bottom: 6px !important; }
+  .footer a { font-size: 12px !important; }
+  .footer-bottom { margin-top: 24px !important; padding-top: 16px !important; flex-direction: column; align-items: flex-start; }
+}
 </style>
 </head>
 <body>
@@ -531,28 +640,25 @@ strong, b{font-weight:700}
       株式会社FUSHIME 代表取締役<br>
       <b>山下 克斗</b>
     </div>
+    <div class="ceo-sns reveal" style="margin-top:48px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap">
+      <a href="https://www.instagram.com/the.fushime" target="_blank" rel="noopener" class="sns-btn" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://www.youtube.com/@koiFes_Japan_tokushima" target="_blank" rel="noopener" class="sns-btn" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+        <span>YouTube</span>
+      </a>
+      <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="sns-btn" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.2 1.7 3.8 4 4v3c-1.5 0-2.9-.4-4-1v6.5a5.5 5.5 0 1 1-5.5-5.5v3a2.5 2.5 0 1 0 2.5 2.5V3z"/></svg>
+        <span>TikTok</span>
+      </a>
+    </div>
+
   </div>
 </section>
 
-<!-- ============================== PROFILE ============================== -->
-<section class="profile">
-  <div class="profile-inner">
-    <p class="eyebrow center reveal">Profile</p>
-    <h2 class="h-2 reveal reveal-d1">代表プロフィール</h2>
-    <dl class="profile-table reveal reveal-d2">
-      <div class="profile-row"><dt>氏名</dt><dd>山下 克斗（やました かつと）</dd></div>
-      <div class="profile-row"><dt>役職</dt><dd>株式会社FUSHIME 代表取締役</dd></div>
-      <div class="profile-row"><dt>創業</dt><dd>2020年4月（株式会社FUSHIME）</dd></div>
-      <div class="profile-row"><dt>主な役割</dt><dd>
-        恋フェスJAPAN 主宰<br>
-        美意識・challengym 経営<br>
-        サロンカルテ・FUSHIME Beauty 開発統括<br>
-        MIRAIZ アプリ プロデューサー
-      </dd></div>
-      <div class="profile-row"><dt>ミッション</dt><dd>出会いで、人生の節目を創る。</dd></div>
-    </dl>
-  </div>
-</section>
+
 
 <!-- ============================== VALUES ============================== -->
 <section class="values">
