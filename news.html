@@ -599,6 +599,71 @@ p, .body, .article-body p {
   .num-item .big { font-size: 30px !important; }
   .num-item .lbl { font-size: 11px !important; }
 }
+
+/* ===== MOBILE MENU FIX + FOOTER TIGHT + FADE-IN ===== */
+@media (max-width: 640px) {
+  /* Hamburger button - 確実に表示 */
+  .menu-toggle {
+    display: inline-flex !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer;
+    z-index: 101;
+  }
+  .nav-cta { display: none !important; }
+  /* 開いた時のメニュー */
+  .nav-links.open {
+    display: flex !important;
+    position: fixed !important;
+    top: 48px !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+    background: rgba(255,255,255,.98) !important;
+    backdrop-filter: blur(30px) !important;
+    -webkit-backdrop-filter: blur(30px) !important;
+    flex-direction: column !important;
+    padding: 24px 24px 40px !important;
+    gap: 0 !important;
+    z-index: 99 !important;
+    overflow-y: auto !important;
+  }
+  .nav-links.open a {
+    display: block !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    padding: 18px 6px !important;
+    border-bottom: 1px solid rgba(0,0,0,.06) !important;
+    width: 100% !important;
+    color: #1d1d1f !important;
+    opacity: 1 !important;
+  }
+
+  /* フッターをもっとコンパクトに */
+  .footer { padding: 28px 18px 18px !important; }
+  .footer-inner { gap: 14px 14px !important; grid-template-columns: 1fr 1fr !important; }
+  .footer-brand { grid-column: 1 / -1 !important; margin-bottom: 4px !important; }
+  .footer-brand .brand { font-size: 16px !important; margin-bottom: 10px !important; }
+  .footer-brand p { font-size: 10px !important; line-height: 1.45 !important; }
+  .footer h5 { margin-bottom: 8px !important; font-size: 10px !important; letter-spacing: 0 !important; }
+  .footer li { margin-bottom: 5px !important; }
+  .footer a { font-size: 11px !important; }
+  .footer-sns { margin-top: 4px !important; gap: 8px !important; }
+  .footer-sns a { width: 32px !important; height: 32px !important; }
+  .footer-sns svg { width: 14px !important; height: 14px !important; }
+  .footer-bottom { margin-top: 16px !important; padding-top: 12px !important; font-size: 9px !important; }
+
+  /* 強化フェードイン: 大きい見出し系を長めに */
+  .hero h1.reveal, .stage h2.reveal, .product h2.reveal, .ceo blockquote.reveal {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+    transition: opacity 1.6s var(--ease), transform 1.6s var(--ease);
+    filter: blur(6px);
+  }
+  .hero h1.reveal.in, .stage h2.reveal.in, .product h2.reveal.in, .ceo blockquote.reveal.in {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+    transition: opacity 1.6s var(--ease), transform 1.6s var(--ease), filter 1.4s var(--ease);
+  }
+}
 </style>
 </head>
 <body>
