@@ -1332,6 +1332,24 @@ p, .body, .article-body p {
     transform: translateY(-1px);
   }
 }
+
+/* ===== LAYER HEADLINES BIGGER ===== */
+.product h2.h-1 {
+  font-size: clamp(48px, 7.5vw, 96px) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.025em !important;
+}
+@media (max-width: 640px) {
+  .product h2.h-1 {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+  }
+}
+/* Layer 01 直前のセクション余白も圧縮 */
+.product { padding-top: 80px !important; }
+@media (max-width: 640px) {
+  .product { padding-top: 32px !important; }
+}
 </style>
 </head>
 <body>
@@ -1393,7 +1411,7 @@ p, .body, .article-body p {
 
 
 <!-- ============================== STAGE: 解決宣言 ============================== -->
-<section class="stage" style="background:#fff;padding:140px 22px;text-align:center">
+<section class="stage" style="background:#fff;padding:80px 22px 40px;text-align:center">
   <p class="eyebrow reveal">Our Answer</p>
   <h2 class="h-1 reveal reveal-d1">だから、私たちが変える。</h2>
   <p class="lede reveal reveal-d2" style="max-width:34em;margin:24px auto 0">
@@ -1776,7 +1794,10 @@ p, .body, .article-body p {
 
 <!-- ============================== CEO QUOTE ============================== -->
 <section class="ceo">
-  <div class="ceo-inner">
+  <div class="ceo-inner" style="display:flex;flex-direction:column;align-items:center;gap:40px">
+    <div class="ceo-quote-photo reveal" style="width:200px;height:200px;border-radius:50%;overflow:hidden;background:#000;position:relative;-webkit-box-reflect:below 4px linear-gradient(transparent 70%, rgba(0,0,0,.1))">
+      <img src="yamashita.jpg" alt="代表取締役 山下 克斗" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%">
+    </div>
     <p class="eyebrow reveal">CEO Message</p>
     <blockquote class="reveal reveal-d1">
       “人は出逢いでしか<br>変わらない。”
