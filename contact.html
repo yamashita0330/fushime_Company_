@@ -777,6 +777,21 @@ p, .body, .article-body p {
   }
   .nav-links.open a:hover, .nav-links.open a:active { color: #ff4d00 !important; }
 }
+
+/* ===== FOOTER MOBILE 3-COL OVERRIDE ===== */
+@media (max-width: 640px) {
+  .footer-inner { 
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 16px 8px !important;
+  }
+  .footer-brand { 
+    grid-column: 1 / -1 !important; 
+    margin-bottom: 8px !important;
+  }
+  .footer h5 { font-size: 11px !important; margin-bottom: 10px !important; }
+  .footer li { margin-bottom: 6px !important; }
+  .footer a { font-size: 10px !important; }
+}
 </style>
 </head>
 <body>
