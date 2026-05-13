@@ -767,6 +767,55 @@ p, .body, .article-body p {
   .footer li { margin-bottom: 6px !important; }
   .footer a { font-size: 10px !important; }
 }
+
+/* ===== PC NAV IMPROVED ===== */
+@media (min-width: 981px) {
+  .nav {
+    height: 56px !important;
+    background: rgba(255,255,255,.78) !important;
+    backdrop-filter: saturate(180%) blur(24px) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(24px) !important;
+  }
+  .nav-inner { padding: 0 28px !important; }
+  .brand { font-size: 19px !important; letter-spacing: .02em !important; }
+  .nav-links { gap: 36px !important; }
+  .nav-links a {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: rgba(29,29,31,.85) !important;
+    opacity: 1 !important;
+    transition: color .2s ease !important;
+    padding: 8px 0 !important;
+    position: relative;
+  }
+  .nav-links a:hover {
+    color: #ff4d00 !important;
+  }
+  .nav-links a.active {
+    color: #1d1d1f !important;
+  }
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 2px;
+    background: #ff4d00;
+    border-radius: 2px;
+  }
+  .nav-cta {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    padding: 9px 18px !important;
+    background: #1d1d1f !important;
+    color: #fff !important;
+    letter-spacing: .01em !important;
+    transition: background .2s ease, transform .2s ease !important;
+  }
+  .nav-cta:hover {
+    background: #ff4d00 !important;
+    transform: translateY(-1px);
+  }
+}
 </style>
 </head>
 <body>
@@ -910,10 +959,8 @@ if (heroVideo) {
     heroVideo.play().catch(()=>{});
     if (fallback) fallback.style.opacity = '0';
   });
-  heroVideo.addEventListener('error', () => { heroVideo.style.display = 'none'; });
-  setTimeout(() => {
-    if (!videoOk) heroVideo.style.display = 'none';
-  }, 1500);
+  heroVideo.addEventListener('error', () => {});
+  setTimeout(() => { if (!videoOk) heroVideo.removeAttribute('preload'); heroVideo.load(); }, 8000);
 }
 
 /* ===== ナビ Blur 強度 ===== */
