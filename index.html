@@ -211,6 +211,18 @@ strong, b{font-weight:700}
 .reveal-d2{transition-delay:.2s}
 .reveal-d3{transition-delay:.3s}
 .reveal-d4{transition-delay:.4s}
+/* 強化フェードイン（重要見出し用・blur→clear） */
+.fade-strong{
+  opacity:0;
+  transform:translate3d(0,44px,0);
+  filter:blur(12px);
+  transition:opacity 1.5s var(--ease), transform 1.5s var(--ease), filter 1.3s var(--ease);
+}
+.fade-strong.in{
+  opacity:1;
+  transform:translate3d(0,0,0);
+  filter:blur(0);
+}
 
 /* ===== ARTICLE / BLOG ===== */
 .article{padding:160px 22px 120px;background:var(--bg-light)}
@@ -1414,7 +1426,7 @@ p, .body, .article-body p {
 <!-- ============================== STAGE: 解決宣言 ============================== -->
 <section class="stage" style="background:#fff;padding:80px 22px 40px;text-align:center">
   <p class="eyebrow reveal">Our Answer</p>
-  <h2 class="h-1 reveal reveal-d1">だから、私たちが変える。</h2>
+  <h2 class="h-1 reveal reveal-d1 fade-strong">だから、私たちが変える。</h2>
   <p class="lede reveal reveal-d2" style="max-width:34em;margin:24px auto 0">
     出会いをつくる、自信を育てる、成長を見える化する。<br>
     3つの層で、地方から「恋愛ができる社会」をつくり直します。
