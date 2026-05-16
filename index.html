@@ -911,10 +911,10 @@ strong, b{font-weight:700}
 .info-inner{max-width:880px;margin:0 auto}
 .info h2{margin-bottom:80px;text-align:center}
 .info-table{display:flex;flex-direction:column}
-.info-row{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 4px;font-size:17px}
-.info-row dt{color:var(--ink-mute);font-weight:400}
-.info-row dd{color:var(--ink);font-weight:400;line-height:1.5}
-@media(max-width:560px){.info-row{grid-template-columns:1fr;gap:6px;padding:20px 4px}}
+.info-row{display:grid;grid-template-columns:200px auto;justify-content:center;gap:32px;padding:28px 4px;font-size:17px}
+.info-row dt{color:var(--ink-mute);font-weight:400;text-align:right}
+.info-row dd{color:var(--ink);font-weight:400;line-height:1.5;text-align:left;max-width:480px}
+@media(max-width:560px){.info-row{grid-template-columns:1fr;gap:6px;padding:20px 4px;text-align:center}.info-row dt,.info-row dd{text-align:center;max-width:none}}
 
 /* ===== CTA ===== */
 .cta{padding:240px 22px;background:var(--bg-dark);color:#fff;text-align:center}
