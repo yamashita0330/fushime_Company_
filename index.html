@@ -196,6 +196,10 @@
 .svc-card .desc{font-family:"Noto Sans JP",sans-serif;font-size:13px;color:var(--ink-mute);line-height:1.9;flex:1}
 .svc-card .more{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;justify-content:space-between;color:var(--ink)}
 .svc-card .more::after{content:"→";color:var(--accent)}
+.svc-card-soon{cursor:default;opacity:.85}
+.svc-card-soon:hover{transform:none}
+.svc-card-soon .more::after{content:"";color:transparent}
+.svc-card-soon .more span{color:var(--accent);letter-spacing:.2em}
 
 /* ===== SCORE ===== */
 .score{padding:200px 40px;background:var(--bg-2);border-bottom:1px solid var(--line)}
@@ -670,26 +674,26 @@
   </div>
   <div class="svc-track-wrap" id="svcTrack">
     <div class="svc-track">
-      <article class="svc-card">
+      <a href="https://tokushima-datsumou.site/" target="_blank" rel="noopener" class="svc-card">
         <div class="img-wrap"><span class="badge">自社運営</span><img src="assets/cards/beauty.jpg" alt="" loading="lazy" onerror="this.src='https://picsum.photos/seed/biz-beauty/600/450'"></div>
-        <div class="body"><div class="num">01 / Beauty</div><h3>BIISHIKI</h3><p class="ja">美意識</p><p class="desc">脱毛・フェイシャルを自社直営。「自信を持てる肌」を、現場の技術で取り戻す。</p><div class="more"><span>View Service</span></div></div>
-      </article>
-      <article class="svc-card">
+        <div class="body"><div class="num">01 / Beauty</div><h3>BIISHIKI</h3><p class="ja">美意識</p><p class="desc">脱毛・フェイシャルを自社直営。「自信を持てる肌」を、現場の技術で取り戻す。</p><div class="more"><span>Visit Site</span></div></div>
+      </a>
+      <a href="https://personalgym-tokushima.site/" target="_blank" rel="noopener" class="svc-card">
         <div class="img-wrap"><span class="badge">自社運営</span><img src="assets/cards/gym.jpg" alt="" loading="lazy" onerror="this.src='https://picsum.photos/seed/biz-gym/600/450'"></div>
-        <div class="body"><div class="num">02 / Fitness</div><h3>CHALLENGYM</h3><p class="ja">チャレンジム</p><p class="desc">24時間ジムを自社運営。続けられる行動が、自信のいちばん下に積み上がる。</p><div class="more"><span>View Service</span></div></div>
-      </article>
-      <article class="svc-card">
+        <div class="body"><div class="num">02 / Fitness</div><h3>CHALLENGYM</h3><p class="ja">チャレンジム</p><p class="desc">24時間ジムを自社運営。続けられる行動が、自信のいちばん下に積み上がる。</p><div class="more"><span>Visit Site</span></div></div>
+      </a>
+      <a href="https://share.google/1hDdcQywQ8CB5097Q" target="_blank" rel="noopener" class="svc-card">
         <div class="img-wrap"><span class="badge">自社運営</span><img src="assets/cards/nail.jpg" alt="" loading="lazy" onerror="this.src='https://picsum.photos/seed/biz-nail/600/450'"></div>
-        <div class="body"><div class="num">03 / Nail</div><h3>NAIL SALON</h3><p class="ja">ネイルサロン</p><p class="desc">指先まで自信を整える。日々のテンションを変える、小さな自己表現の場。</p><div class="more"><span>View Service</span></div></div>
-      </article>
-      <article class="svc-card">
+        <div class="body"><div class="num">03 / Nail</div><h3>NAIL SALON</h3><p class="ja">ネイルサロン</p><p class="desc">指先まで自信を整える。日々のテンションを変える、小さな自己表現の場。</p><div class="more"><span>Visit Site</span></div></div>
+      </a>
+      <a href="https://koifes-japan.com/" target="_blank" rel="noopener" class="svc-card">
         <div class="img-wrap"><span class="badge">フラッグシップ</span><img src="assets/cards/koifes.jpg" alt="" loading="lazy" onerror="this.src='https://picsum.photos/seed/biz-koifes/600/450'"></div>
-        <div class="body"><div class="num">04 / Event</div><h3>KOI-FES JAPAN</h3><p class="ja">恋フェスJapan</p><p class="desc">徳島最大の体験型婚活イベント。初回12組中5組がマッチした、リアルな出会いの場。</p><div class="more"><span>View Service</span></div></div>
-      </article>
-      <article class="svc-card">
-        <div class="img-wrap"><span class="badge">開発中</span><img src="assets/cards/miraiz.jpg" alt="" loading="lazy" onerror="this.src='https://picsum.photos/seed/biz-miraiz/600/450'"></div>
-        <div class="body"><div class="num">05 / App</div><h3>MIRAIZ</h3><p class="ja">ミライズ アプリ</p><p class="desc">未来の自分に、出会う場所。徳島特化型マッチングアプリで、データから理想の出会いへ。</p><div class="more"><span>View Service</span></div></div>
-      </article>
+        <div class="body"><div class="num">04 / Event</div><h3>KOI-FES JAPAN</h3><p class="ja">恋フェスJapan</p><p class="desc">徳島最大の体験型婚活イベント。初回12組中5組がマッチした、リアルな出会いの場。</p><div class="more"><span>Visit Site</span></div></div>
+      </a>
+      <div class="svc-card svc-card-soon">
+        <div class="img-wrap"><span class="badge">Coming Soon</span><img src="assets/cards/miraiz.jpg" alt="" loading="lazy" onerror="this.src='https://picsum.photos/seed/biz-miraiz/600/450'"></div>
+        <div class="body"><div class="num">05 / App</div><h3>MIRAIZ</h3><p class="ja">ミライズ アプリ</p><p class="desc">未来の自分に、出会う場所。徳島特化型マッチングアプリで、データから理想の出会いへ。</p><div class="more"><span>2026 Launch</span></div></div>
+      </div>
     </div>
   </div>
 </section>
