@@ -356,6 +356,22 @@
 }
 .report-card .arrow-line::after{content:"→";color:var(--accent);margin-left:auto}
 
+/* ===== Single featured report (large card) ===== */
+.reports-single{display:block}
+.report-feature{
+  display:grid;grid-template-columns:1.2fr 1fr;gap:64px;
+  align-items:center;
+}
+.report-feature .report-thumb{aspect-ratio:4/3}
+.report-feature .report-body{display:flex;flex-direction:column;gap:24px}
+.report-feature h3{
+  font-family:"Noto Sans JP",sans-serif;
+  font-size:clamp(24px,2.6vw,36px);
+  font-weight:700;letter-spacing:-.01em;line-height:1.4;
+}
+.report-feature p{font-size:14px;line-height:2}
+.report-feature .arrow-line{max-width:220px}
+
 /* ===== YOUTUBE ===== */
 .yt-section{padding:200px 0 0;border-bottom:1px solid var(--line);background:var(--bg)}
 .yt-head{padding:0 40px;max-width:var(--max);margin:0 auto 80px}
@@ -492,6 +508,9 @@
   .report-thumb-glyph{font-size:18px}
   .report-card h3{font-size:16px}
   .report-card p{font-size:12px}
+  .report-feature{grid-template-columns:1fr;gap:24px}
+  .report-feature h3{font-size:clamp(20px,5.5vw,26px)}
+  .report-feature p{font-size:13px;line-height:1.9}
   .yt-section{padding-top:100px}
   .yt-head{padding:0 20px;margin-bottom:48px}
   .yt-head-row{grid-template-columns:1fr;gap:24px;align-items:start}
@@ -745,29 +764,15 @@
       <a href="news.html" class="view-all reveal d3">View All News</a>
     </div>
 
-    <div class="reports-grid">
-      <a class="report-card reveal" href="reports/tokushima-governor.html">
+    <div class="reports-grid reports-single">
+      <a class="report-card report-feature reveal" href="reports/tokushima-governor.html">
         <div class="report-thumb"><img src="assets/governor-meeting.jpg" alt="徳島県・後藤田知事との面会" onerror="this.style.display='none'"></div>
-        <div class="report-meta"><time>2026.05.18</time><span class="report-cat">行政対話</span></div>
-        <h3>徳島県・後藤田知事と、少子化の本質を語る</h3>
-        <p>知事と面会し、徳島の将来と少子化の本質について議論。「出会う→動く→続く」を仕組みとして実装する、数字と行動ログで向き合う少子化対策へ。</p>
-        <span class="arrow-line">Read Report</span>
-      </a>
-
-      <a class="report-card reveal d1" href="news.html">
-        <div class="report-thumb event"><div class="report-thumb-glyph">恋フェス<br>Vol.5</div></div>
-        <div class="report-meta"><time>2026.05.06</time><span class="report-cat">イベント</span></div>
-        <h3>恋フェスJAPAN Vol.5 開催決定<br>（ゆめタウン徳島・300名規模）</h3>
-        <p>2026年6月、ゆめタウン徳島にて開催。2部制300名規模、参加費6,000円。新コンテンツ「12タイプ恋愛診断」も初お披露目。</p>
-        <span class="arrow-line">Read Report</span>
-      </a>
-
-      <a class="report-card reveal d2" href="news.html">
-        <div class="report-thumb product"><div class="report-thumb-glyph">サロン<br>カルテ稼働</div></div>
-        <div class="report-meta"><time>2026.05.02</time><span class="report-cat">プロダクト</span></div>
-        <h3>サロンカルテ管理システム公開</h3>
-        <p>美意識・YUBIBI 全店舗で本格稼働開始。カウンセリングUIをApple風に刷新し、全スタッフがリアルタイムで顧客カルテを共有可能に。</p>
-        <span class="arrow-line">Read Report</span>
+        <div class="report-body">
+          <div class="report-meta"><time>2026.05.18</time><span class="report-cat">行政対話</span></div>
+          <h3>徳島県・後藤田知事と、<br>少子化の本質を語る</h3>
+          <p>後藤田知事と面会し、徳島の将来と少子化の本質について議論。支援金や制度設計だけでは出生数は増えない――「出会う→動く→続く」を仕組みとして実装する、数字と行動ログで向き合う少子化対策へ。</p>
+          <span class="arrow-line">Read Full Report</span>
+        </div>
       </a>
     </div>
   </div>

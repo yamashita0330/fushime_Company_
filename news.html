@@ -90,6 +90,24 @@
 }
 .news-card .arrow-line::after{content:"→";color:var(--accent);margin-left:auto}
 
+/* ===== Single featured news ===== */
+.news-single{
+  padding:80px 40px 160px;max-width:var(--max);margin:0 auto;
+  display:block;
+}
+.news-feature{
+  display:grid;grid-template-columns:1.2fr 1fr;gap:64px;
+  align-items:center;
+}
+.news-feature .news-thumb{aspect-ratio:4/3}
+.news-feature .news-body{display:flex;flex-direction:column;gap:24px}
+.news-feature h3{
+  font-family:"Noto Sans JP",sans-serif;
+  font-size:clamp(26px,3vw,40px);font-weight:700;
+  letter-spacing:-.01em;line-height:1.4;
+}
+.news-feature p{font-size:14px;line-height:2}
+
 /* ===== NEWSLETTER ===== */
 .newsletter{
   padding:200px 40px;background:var(--bg-2);border-bottom:1px solid var(--line);
@@ -130,6 +148,10 @@
   .news-thumb-glyph{font-size:18px}
   .news-card h3{font-size:16px}
   .news-card p{font-size:12px;line-height:1.8}
+  .news-single{padding:48px 20px 80px}
+  .news-feature{grid-template-columns:1fr;gap:24px}
+  .news-feature h3{font-size:clamp(22px,6vw,28px)}
+  .news-feature p{font-size:13px;line-height:1.9}
   .news-meta{font-size:10px;gap:12px}
   .newsletter{padding:80px 20px}
   .newsletter .lede{margin-bottom:40px}
@@ -176,73 +198,16 @@
   </div>
 </section>
 
-<div class="filters reveal">
-  <button class="filter-chip active" data-filter="all">All</button>
-  <button class="filter-chip" data-filter="event">Event</button>
-  <button class="filter-chip" data-filter="koifes">恋フェス</button>
-  <button class="filter-chip" data-filter="beauty">Beauty</button>
-  <button class="filter-chip" data-filter="data">Product</button>
-  <button class="filter-chip" data-filter="company">Company</button>
-</div>
-
-<section class="news-list" id="newsList">
-
-  <a class="news-card reveal" data-cat="company" href="reports/tokushima-governor.html">
+<section class="news-list news-single" id="newsList">
+  <a class="news-card news-feature reveal" href="reports/tokushima-governor.html">
     <div class="news-thumb"><img src="assets/governor-meeting.jpg" alt="徳島県・後藤田知事との面会" onerror="this.style.display='none'"></div>
-    <div class="news-meta"><time>2026.05.18</time><span class="news-cat">Company</span></div>
-    <h3>徳島県・後藤田知事と、少子化の本質を語る</h3>
-    <p>後藤田知事と面会し、徳島の将来と少子化の本質について議論。「出会う→動く→続く」を仕組みとして実装する、数字と行動ログで向き合う少子化対策へ。</p>
-    <span class="arrow-line">Read More</span>
+    <div class="news-body">
+      <div class="news-meta"><time>2026.05.18</time><span class="news-cat">行政対話</span></div>
+      <h3>徳島県・後藤田知事と、少子化の本質を語る</h3>
+      <p>後藤田知事と面会し、徳島の将来と少子化の本質について議論。支援金や制度設計だけでは出生数は増えない――「出会う→動く→続く」を仕組みとして実装する、数字と行動ログで向き合う少子化対策へ。</p>
+      <span class="arrow-line">Read Full Report</span>
+    </div>
   </a>
-
-  <article class="news-card reveal d1" data-cat="event koifes">
-    <div class="news-thumb event"><div class="news-thumb-glyph">恋フェス<br>Vol.5</div></div>
-    <div class="news-meta"><time>2026.05.06</time><span class="news-cat">Event</span></div>
-    <h3>恋フェスJAPAN Vol.5 開催決定<br>（ゆめタウン徳島・300名規模）</h3>
-    <p>2026年6月、ゆめタウン徳島にて開催。2部制300名規模、参加費6,000円。新コンテンツ「12タイプ恋愛診断」も初お披露目。</p>
-    <span class="arrow-line">Read More</span>
-  </article>
-
-  <article class="news-card reveal d2" data-cat="koifes">
-    <div class="news-thumb koifes"><div class="news-thumb-glyph">12タイプ<br>恋愛診断</div></div>
-    <div class="news-meta"><time>2026.05.04</time><span class="news-cat">恋フェス</span></div>
-    <h3>12タイプ恋愛診断「12恋神」リリース予定</h3>
-    <p>愛着スタイル × 恋愛動機の12分類で、自分の恋愛偏差値が見える新診断。あつ森風の3Dマスコットで結果を表示。</p>
-    <span class="arrow-line">Read More</span>
-  </article>
-
-  <article class="news-card reveal" data-cat="data">
-    <div class="news-thumb data"><div class="news-thumb-glyph">サロン<br>カルテ稼働</div></div>
-    <div class="news-meta"><time>2026.05.02</time><span class="news-cat">Product</span></div>
-    <h3>サロンカルテ管理システム公開</h3>
-    <p>美意識・YUBIBI 全店舗で本格稼働開始。カウンセリングUIをApple風に刷新し、全スタッフがリアルタイムで顧客カルテを共有可能に。</p>
-    <span class="arrow-line">Read More</span>
-  </article>
-
-  <article class="news-card reveal d1" data-cat="koifes">
-    <div class="news-thumb koifes"><div class="news-thumb-glyph">創業応援<br>加盟店募集</div></div>
-    <div class="news-meta"><time>2026.04.29</time><span class="news-cat">恋フェス</span></div>
-    <h3>創業応援加盟店プログラム 8枠で募集開始</h3>
-    <p>恋フェスエコシステムに参画いただける、徳島県内の店舗・サービスを8枠限定で募集。送客モデルを軸に運用開始。</p>
-    <span class="arrow-line">Read More</span>
-  </article>
-
-  <article class="news-card reveal d2" data-cat="data">
-    <div class="news-thumb data"><div class="news-thumb-glyph">MIRAIZ<br>App</div></div>
-    <div class="news-meta"><time>2026.04.27</time><span class="news-cat">Product</span></div>
-    <h3>マッチングアプリ「MIRAIZ」開発を本格始動</h3>
-    <p>恋フェスから派生したマッチングアプリ「MIRAIZ」（旧称KOIFES）の開発を本格始動。Bubble.io＋Stripe構成、月額1,980円。20歳以上限定。</p>
-    <span class="arrow-line">Read More</span>
-  </article>
-
-  <article class="news-card reveal" data-cat="company">
-    <div class="news-thumb company"><div class="news-thumb-glyph">エコシステム<br>戦略確定</div></div>
-    <div class="news-meta"><time>2026.04.27</time><span class="news-cat">Company</span></div>
-    <h3>「恋フェスエコシステム」戦略を確定</h3>
-    <p>3事業並列の経営から、恋フェスを中核とするエコシステム経営へ移行。徳島から全国へ、地方発のパッケージ展開を加速。</p>
-    <span class="arrow-line">Read More</span>
-  </article>
-
 </section>
 
 <section class="newsletter">
