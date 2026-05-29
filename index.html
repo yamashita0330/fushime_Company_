@@ -533,8 +533,8 @@
 </div>
 
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline preload="auto"
-         poster="assets/hero-poster.jpg" aria-hidden="true">
+  <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata"
+         disablePictureInPicture aria-hidden="true">
     <source src="assets/hero.mp4" type="video/mp4">
   </video>
   <div class="hero-fallback" aria-hidden="true"></div>
@@ -551,14 +551,6 @@
       出会い × 美容 × データ。<br>
       人口の構造を、ひとつのエコシステムで変える会社です。
     </p>
-  </div>
-  <div class="hero-bottom">
-    <div class="hero-meta">
-      <div>MISSION<span>出生数を再び増やす</span></div>
-      <div>HEADQUARTERS<span>徳島市</span></div>
-      <div>FOUNDED<span>2020.04</span></div>
-      <div>ECOSYSTEM<span>5 Steps</span></div>
-    </div>
   </div>
   <div class="hero-scroll">SCROLL</div>
 </section>
@@ -585,7 +577,7 @@
   <div class="logic-inner">
     <div class="logic-head">
       <p class="eyebrow reveal">— The Logic</p>
-      <h2 class="h-1 reveal d1">出生数は、<br>5つの段階で増える。</h2>
+      <h2 class="h-1 reveal d1 logic-headline"><span>出生数は、</span><span>5つの段階で増える。</span></h2>
       <p class="lede reveal d2">
         私たちは「結婚を急がせる」のではなく、その手前にある5つの段階を順番に設計し直しています。<br>
         磨いて → 出会って → 磨いて → サポートして → 生まれる。すべてに、自社事業をひとつずつ用意しました。
@@ -928,6 +920,17 @@ window.addEventListener('scroll',()=>{
 },{passive:true});
 
 // mobile menu
+// hero video autoplay safety net for iOS/Safari
+const heroVid = document.querySelector('.hero-video');
+if(heroVid){
+  const tryPlay = ()=> heroVid.play().catch(()=>{});
+  tryPlay();
+  document.addEventListener('touchstart', tryPlay, {once:true,passive:true});
+  document.addEventListener('click', tryPlay, {once:true});
+  // 念のため visibility 復帰時にも
+  document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) tryPlay(); });
+}
+
 const mt=document.getElementById('menuToggle');
 const mm=document.getElementById('mobileMenu');
 if(mt && mm){

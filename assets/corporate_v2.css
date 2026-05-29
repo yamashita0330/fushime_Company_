@@ -203,8 +203,16 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .cta-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto}
 .cta-headline{display:flex;flex-direction:column;gap:.1em;align-items:center}
 .cta-headline span{display:block;white-space:nowrap}
+
+/* Logic section headline: always 2 lines */
+.logic-headline{display:flex;flex-direction:column;gap:.05em;align-items:flex-start}
+.logic-headline span{display:block;white-space:nowrap}
+
 @media (max-width:760px){
+  .cta-headline{font-size:clamp(22px,5.5vw,30px)!important;line-height:1.4}
   .cta-headline span{white-space:normal}
+  .logic-headline{font-size:clamp(26px,7vw,36px)!important}
+  .logic-headline span{white-space:normal}
 }
 .cta h2{margin-top:24px;font-size:clamp(36px,5vw,72px)}
 .cta .lede{margin-top:32px}

@@ -10,6 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/corporate_v2.css">
 <style>
+/* ===== CONTACT LEDE (always 2 lines) ===== */
+.contact-lede{display:flex;flex-direction:column;gap:.2em}
+.contact-lede span{display:block;white-space:nowrap}
+@media (max-width:760px){
+  .contact-lede{font-size:13px}
+  .contact-lede span{white-space:normal}
+}
+
 /* ===== KINDS ===== */
 .kinds{
   padding:80px 40px 160px;max-width:var(--max);margin:0 auto;
@@ -207,9 +215,9 @@
     <p class="crumbs reveal"><a href="index.html">Home</a><span>/</span>Contact</p>
     <p class="eyebrow reveal">— Contact</p>
     <h1 class="h-display reveal d1" style="font-size:clamp(48px,7vw,100px);margin-top:32px">CONTACT.</h1>
-    <p class="lede reveal d2">
-      事業に関するご相談から、採用・取材・加盟店ご応募まで。<br>
-      お気軽にご連絡ください。
+    <p class="lede reveal d2 contact-lede">
+      <span>事業に関するご相談から、採用・取材・加盟店ご応募まで。</span>
+      <span>お気軽にご連絡ください。</span>
     </p>
   </div>
 </section>
